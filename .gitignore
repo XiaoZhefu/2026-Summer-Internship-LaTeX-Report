@@ -1,6 +1,13 @@
 .agents
 .claude
+.codex
 .git
+.tmp*
 .vscode
 
 out/
+
+*.aux
+*.log
+*.out
+*.pdf

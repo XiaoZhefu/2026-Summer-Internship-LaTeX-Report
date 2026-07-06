@@ -46,6 +46,10 @@
   \node[anchor=base west, inner sep=0pt] at
     ([xshift=#1, yshift=-#2]coverformorigin) {#3};%
 }
+\newcommand{\coverformbasecenter}[3]{%
+  \node[anchor=base, inner sep=0pt] at
+    ([xshift=#1, yshift=-#2]coverformorigin) {#3};%
+}
 \newcommand{\coverformruleline}[3]{%
   \draw[line width=0.45pt]
     ([xshift=#1, yshift=-#3]coverformorigin) --
@@ -65,31 +69,43 @@
   \coordinate (coverformorigin) at ([xshift=-6.7mm]current page.north west);
   \coverformbasewest{61mm}{157.5mm}{\coverFormFont 生产实习单位}
   \coverformruleline{94mm}{158mm}{160mm}
+  \coverformbasecenter{126mm}{157.5mm}{\coverFormFont 中车南京浦镇车辆有限公司}
   \coverformbasewest{61mm}{168.5mm}{\coverFormFont 实\hspace{0.5em}习\hspace{0.5em}时\hspace{0.5em}间}
   \coverformruleline{94mm}{118mm}{171mm}
+  \coverformbasecenter{106mm}{168.5mm}{\coverFormFont 2026}
   \coverformbasewest{119mm}{168.5mm}{\coverFormFont 年}
   \coverformruleline{124mm}{133mm}{171mm}
+  \coverformbasecenter{128.5mm}{168.5mm}{\coverFormFont 7}
   \coverformbasewest{134.5mm}{168.5mm}{\coverFormFont 月}
   \coverformruleline{139mm}{146mm}{171mm}
+  \coverformbasecenter{142.5mm}{168.5mm}{\coverFormFont 6}
   \coverformbasewest{147mm}{168.5mm}{\coverFormFont 日\hspace{0.55em}至}
   \coverformruleline{94mm}{118mm}{182mm}
+  \coverformbasecenter{106mm}{179.5mm}{\coverFormFont 2026}
   \coverformbasewest{119mm}{179.5mm}{\coverFormFont 年}
   \coverformruleline{124mm}{133mm}{182mm}
+  \coverformbasecenter{128.5mm}{179.5mm}{\coverFormFont 7}
   \coverformbasewest{134.5mm}{179.5mm}{\coverFormFont 月}
   \coverformruleline{139mm}{146mm}{182mm}
+  \coverformbasecenter{142.5mm}{179.5mm}{\coverFormFont 10}
   \coverformbasewest{147mm}{179.5mm}{\coverFormFont 日\hspace{0.55em}止}
   \coverformbasewest{61mm}{190.5mm}{\coverFormFont 指导人员姓名}
   \coverformruleline{94mm}{158mm}{193mm}
   \coverformbasewest{61mm}{201.5mm}{\coverFormFont 指导教师姓名}
   \coverformruleline{94mm}{158mm}{204mm}
+  \coverformbasecenter{126mm}{201.5mm}{\coverFormFont 周凯}
   \coverformbasewest{61mm}{212.5mm}{\coverFormFont 学\hspace{0.5em}生\hspace{0.5em}姓\hspace{0.5em}名}
   \coverformruleline{94mm}{158mm}{215mm}
-  \coverformruleline{57mm}{89mm}{226mm}
-  \coverformbasewest{91mm}{223.5mm}{\coverFormFont 学院}
-  \coverformruleline{101mm}{131mm}{226mm}
-  \coverformbasewest{132mm}{223.5mm}{\coverFormFont 专业}
-  \coverformruleline{141mm}{155mm}{226mm}
-  \coverformbasewest{157mm}{223.5mm}{\coverFormFont 年级}
+  \coverformbasecenter{126mm}{212.5mm}{\coverFormFont 肖哲夫}
+  \coverformruleline{57.5mm}{85.5mm}{226mm}
+  \coverformbasecenter{71.5mm}{223.5mm}{\coverFormFont 交通}
+  \coverformbasewest{87.5mm}{223.5mm}{\coverFormFont 学院}
+  \coverformruleline{97.5mm}{127.5mm}{226mm}
+  \coverformbasecenter{112.5mm}{223.5mm}{\coverFormFont 车辆工程}
+  \coverformbasewest{128.5mm}{223.5mm}{\coverFormFont 专业}
+  \coverformruleline{140.5mm}{154.5mm}{226mm}
+  \coverformbasecenter{147.5mm}{223.5mm}{\coverFormFont 大三}
+  \coverformbasewest{156.5mm}{223.5mm}{\coverFormFont 年级}
 }
 
 \newpage
