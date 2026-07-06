@@ -1,0 +1,123 @@
+\documentclass[12pt, oneside, a4paper]{ctexart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[{top=2.54cm, bottom=2.54cm, left=3.18cm, right=3.18cm}]{geometry}
+\usepackage{graphicx}
+\usepackage[breaklinks, colorlinks=false, hidelinks]{hyperref}
+\usepackage{mathptmx}
+\usepackage{xcolor}
+\usepackage{xeCJK}
+\usepackage{tikz}
+
+\pagestyle{empty}
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeBold={2}]{SimSun}
+\setCJKfamilyfont{zh}{SimSun}
+\newCJKfontfamily\reportSong{SimSun}
+\newCJKfontfamily\reportHei{SimHei}
+\newCJKfontfamily\reportFang{FangSong}
+
+\newcommand{\pagecanvas}[1]{%
+  \thispagestyle{empty}%
+  \begin{tikzpicture}[remember picture, overlay]
+    #1
+  \end{tikzpicture}%
+  \null
+}
+\newcommand{\basewest}[3]{%
+  \node[anchor=base west, inner sep=0pt] at
+    ([xshift=#1, yshift=-#2]current page.north west) {#3};%
+}
+\newcommand{\basecenter}[3]{%
+  \node[anchor=base, inner sep=0pt] at
+    ([xshift=#1, yshift=-#2]current page.north west) {#3};%
+}
+\newcommand{\northwest}[3]{%
+  \node[anchor=north west, inner sep=0pt] at
+    ([xshift=#1, yshift=-#2]current page.north west) {#3};%
+}
+\newcommand{\ruleline}[3]{%
+  \draw[line width=0.45pt]
+    ([xshift=#1, yshift=-#3]current page.north west) --
+    ([xshift=#2, yshift=-#3]current page.north west);%
+}
+\newcommand{\coverformbasewest}[3]{%
+  \node[anchor=base west, inner sep=0pt] at
+    ([xshift=#1, yshift=-#2]coverformorigin) {#3};%
+}
+\newcommand{\coverformruleline}[3]{%
+  \draw[line width=0.45pt]
+    ([xshift=#1, yshift=-#3]coverformorigin) --
+    ([xshift=#2, yshift=-#3]coverformorigin);%
+}
+\newcommand{\coverFormFont}{\reportSong\fontsize{14pt}{16.5pt}\selectfont}
+\newcommand{\coverTitleFont}{\CJKfontspec[FakeBold={2}]{SimHei}\fontsize{28pt}{28pt}\selectfont}
+\newcommand{\instructionTitleFont}{\CJKfontspec[FakeBold={2}]{SimHei}\fontsize{22pt}{22pt}\selectfont}
+\newcommand{\instructionFont}{\reportFang\fontsize{15.5pt}{24pt}\selectfont}
+\newcommand{\fixedline}[1]{\noindent\makebox[0pt][l]{#1}\\}
+
+\begin{document}
+
+\pagecanvas{%
+  \northwest{64mm}{49mm}{\includegraphics[width=82mm]{assets/tongji-report-logo.jpg}}
+  \basecenter{105mm}{84mm}{\coverTitleFont 实\hspace{0.9em}习\hspace{0.9em}报\hspace{0.9em}告}
+  \coordinate (coverformorigin) at ([xshift=-6.7mm]current page.north west);
+  \coverformbasewest{61mm}{157.5mm}{\coverFormFont 生产实习单位}
+  \coverformruleline{94mm}{158mm}{160mm}
+  \coverformbasewest{61mm}{168.5mm}{\coverFormFont 实\hspace{0.5em}习\hspace{0.5em}时\hspace{0.5em}间}
+  \coverformruleline{94mm}{118mm}{171mm}
+  \coverformbasewest{119mm}{168.5mm}{\coverFormFont 年}
+  \coverformruleline{124mm}{133mm}{171mm}
+  \coverformbasewest{134.5mm}{168.5mm}{\coverFormFont 月}
+  \coverformruleline{139mm}{146mm}{171mm}
+  \coverformbasewest{147mm}{168.5mm}{\coverFormFont 日\hspace{0.55em}至}
+  \coverformruleline{94mm}{118mm}{182mm}
+  \coverformbasewest{119mm}{179.5mm}{\coverFormFont 年}
+  \coverformruleline{124mm}{133mm}{182mm}
+  \coverformbasewest{134.5mm}{179.5mm}{\coverFormFont 月}
+  \coverformruleline{139mm}{146mm}{182mm}
+  \coverformbasewest{147mm}{179.5mm}{\coverFormFont 日\hspace{0.55em}止}
+  \coverformbasewest{61mm}{190.5mm}{\coverFormFont 指导人员姓名}
+  \coverformruleline{94mm}{158mm}{193mm}
+  \coverformbasewest{61mm}{201.5mm}{\coverFormFont 指导教师姓名}
+  \coverformruleline{94mm}{158mm}{204mm}
+  \coverformbasewest{61mm}{212.5mm}{\coverFormFont 学\hspace{0.5em}生\hspace{0.5em}姓\hspace{0.5em}名}
+  \coverformruleline{94mm}{158mm}{215mm}
+  \coverformruleline{57mm}{89mm}{226mm}
+  \coverformbasewest{91mm}{223.5mm}{\coverFormFont 学院}
+  \coverformruleline{101mm}{131mm}{226mm}
+  \coverformbasewest{132mm}{223.5mm}{\coverFormFont 专业}
+  \coverformruleline{141mm}{155mm}{226mm}
+  \coverformbasewest{157mm}{223.5mm}{\coverFormFont 年级}
+}
+
+\newpage
+\pagecanvas{%
+  \basecenter{105mm}{45mm}{\instructionTitleFont 说\hspace{1.4em}明}
+  \northwest{23.5mm}{62mm}{%
+    \begin{minipage}{158mm}
+      \instructionFont
+      \fixedline{1、\hspace{0.4em}实习结束之前，每个学生都必须认真撰写《实习报告》。通过撰}
+      \fixedline{\hspace*{2em}写实习报告，系统地回顾和总结实习的全过程，将实践性教学的}
+      \fixedline{\hspace*{2em}感性认知升华到一定的理论高度，从而提高实习教学效果。}
+      \fixedline{2、\hspace{0.4em}实习报告的首页为目录，要求字迹端正，条理清晰，内容详尽，}
+      \fixedline{\hspace*{2em}数据准确。字数一般不少于 5000 字。}
+      \fixedline{3、\hspace{0.4em}实习报告的撰写应符合实习大纲和实习指导书的要求。报告内容}
+      \fixedline{\hspace*{2em}可包括：实习日程安排，实习单位情况，专题报告记录的整理，}
+      \fixedline{\hspace*{2em}主要设备、工艺流程，技术参数的记录和分析，专题分析，实习}
+      \fixedline{\hspace*{2em}收获和体会，合理化建议等。还应附上必要的图纸或表格。}
+      \fixedline{4、\hspace{0.4em}实习报告的质量反映了实习的质量，它是实习成绩评定的主要依}
+      \fixedline{\hspace*{2em}据之一。实习报告需经实习指导人员审阅，由实习指导教师负责}
+      \fixedline{\hspace*{2em}评分。不交实习报告者不得参加实习成绩评定。}
+    \end{minipage}
+  }
+}
+
+\newpage
+
+\pagecanvas{%
+  \basecenter{105mm}{32mm}{\reportHei\fontsize{16pt}{16pt}\selectfont 目\hspace{1.6em}录}
+}
+
+\end{document}
