@@ -1,65 +1,7 @@
 \documentclass[12pt, oneside, a4paper]{ctexart}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage[{top=2.54cm, bottom=2.54cm, left=3.18cm, right=3.18cm}]{geometry}
-\usepackage{graphicx}
-\usepackage[breaklinks, colorlinks=false, hidelinks]{hyperref}
-\usepackage{mathptmx}
-\usepackage{xcolor}
-\usepackage{xeCJK}
-\usepackage{tikz}
-
-\pagestyle{empty}
-\setmainfont{Times New Roman}
-\setCJKmainfont[AutoFakeBold={2}]{SimSun}
-\setCJKfamilyfont{zh}{SimSun}
-\newCJKfontfamily\reportSong{SimSun}
-\newCJKfontfamily\reportHei{SimHei}
-\newCJKfontfamily\reportFang{FangSong}
-
-\newcommand{\pagecanvas}[1]{%
-  \thispagestyle{empty}%
-  \begin{tikzpicture}[remember picture, overlay]
-    #1
-  \end{tikzpicture}%
-  \null
-}
-\newcommand{\basewest}[3]{%
-  \node[anchor=base west, inner sep=0pt] at
-    ([xshift=#1, yshift=-#2]current page.north west) {#3};%
-}
-\newcommand{\basecenter}[3]{%
-  \node[anchor=base, inner sep=0pt] at
-    ([xshift=#1, yshift=-#2]current page.north west) {#3};%
-}
-\newcommand{\northwest}[3]{%
-  \node[anchor=north west, inner sep=0pt] at
-    ([xshift=#1, yshift=-#2]current page.north west) {#3};%
-}
-\newcommand{\ruleline}[3]{%
-  \draw[line width=0.45pt]
-    ([xshift=#1, yshift=-#3]current page.north west) --
-    ([xshift=#2, yshift=-#3]current page.north west);%
-}
-\newcommand{\coverformbasewest}[3]{%
-  \node[anchor=base west, inner sep=0pt] at
-    ([xshift=#1, yshift=-#2]coverformorigin) {#3};%
-}
-\newcommand{\coverformbasecenter}[3]{%
-  \node[anchor=base, inner sep=0pt] at
-    ([xshift=#1, yshift=-#2]coverformorigin) {#3};%
-}
-\newcommand{\coverformruleline}[3]{%
-  \draw[line width=0.45pt]
-    ([xshift=#1, yshift=-#3]coverformorigin) --
-    ([xshift=#2, yshift=-#3]coverformorigin);%
-}
-\newcommand{\coverFormFont}{\reportSong\fontsize{14pt}{16.5pt}\selectfont}
-\newcommand{\coverTitleFont}{\CJKfontspec[FakeBold={2}]{SimHei}\fontsize{28pt}{28pt}\selectfont}
-\newcommand{\instructionTitleFont}{\CJKfontspec[FakeBold={2}]{SimHei}\fontsize{22pt}{22pt}\selectfont}
-\newcommand{\instructionFont}{\reportFang\fontsize{15.5pt}{24pt}\selectfont}
-\newcommand{\fixedline}[1]{\noindent\makebox[0pt][l]{#1}\\}
+\input{report-header}
+% chktex-file 1
+% chktex-file 8
 
 \begin{document}
 
@@ -91,6 +33,7 @@
   \coverformbasewest{147mm}{179.5mm}{\coverFormFont 日\hspace{0.55em}止}
   \coverformbasewest{61mm}{190.5mm}{\coverFormFont 指导人员姓名}
   \coverformruleline{94mm}{158mm}{193mm}
+  \coverformbasecenter{126mm}{190.5mm}{\coverFormFont 周凯、季元进、吉文、潘宇}
   \coverformbasewest{61mm}{201.5mm}{\coverFormFont 指导教师姓名}
   \coverformruleline{94mm}{158mm}{204mm}
   \coverformbasecenter{126mm}{201.5mm}{\coverFormFont 周凯}
