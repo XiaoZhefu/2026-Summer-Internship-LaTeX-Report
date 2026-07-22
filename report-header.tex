@@ -2,12 +2,18 @@
 % This file is loaded immediately after \documentclass.
 % chktex-file 1
 % chktex-file 8
+% chktex-file 44
 
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{float}
 \usepackage[{top=25.4mm, bottom=25.4mm, left=31.8mm, right=31.8mm}]{geometry}
 \usepackage{graphicx}
 \usepackage[breaklinks, colorlinks=false, hidelinks, bookmarks=false, pdfpagelabels=false]{hyperref}
+\usepackage{multirow}
+\usepackage{nicematrix}
 \usepackage{newtxtext,newtxmath}
 \usepackage{xcolor}
 \usepackage{xeCJK}
@@ -15,6 +21,7 @@
 
 \pagestyle{empty}
 \AtBeginDocument{
+  \hypersetup{pageanchor=false}
   \setCJKfamilyfont{zh}[Path=C:/Windows/Fonts/,Extension=.ttc,FontIndex=0,AutoFakeBold={2}]{simsun}
   \renewcommand{\CJKrmdefault}{zh}
   \renewcommand{\CJKfamilydefault}{zh}
@@ -23,6 +30,16 @@
   \newCJKfontfamily\reportFang[Path=C:/Windows/Fonts/,Extension=.ttf]{simfang}
 }
 
+\renewcommand{\thesection}{\chinese{section}、}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+\ctexset{
+  section = {format = \Large\reportHei\bfseries},
+  subsubsection = {beforeskip = 0.25\baselineskip, afterskip = 0.15\baselineskip}
+}
+\DeclareCaptionFont{wuhao}{\reportSong\fontsize{10.5pt}{12.5pt}\selectfont}
+\captionsetup[table]{font=wuhao, labelsep=quad, justification=centering, hypcap=false}
+
 \newcommand{\pagecanvas}[1]{
   \thispagestyle{empty}
   \begin{tikzpicture}[remember picture, overlay]
@@ -30,35 +47,35 @@
   \end{tikzpicture}
   \null{}
 }
-\newcommand{\basewest}[3]{%
+\newcommand{\basewest}[3]{
   \node[anchor=base west, inner sep=0pt] at
-    ([xshift=#1, yshift=-#2]current page.north west) {#3};%
+  ([xshift=#1, yshift=-#2]current page.north west) {#3};
 }
-\newcommand{\basecenter}[3]{%
+\newcommand{\basecenter}[3]{
   \node[anchor=base, inner sep=0pt] at
-    ([xshift=#1, yshift=-#2]current page.north west) {#3};%
+  ([xshift=#1, yshift=-#2]current page.north west) {#3};
 }
-\newcommand{\northwest}[3]{%
+\newcommand{\northwest}[3]{
   \node[anchor=north west, inner sep=0pt] at
-    ([xshift=#1, yshift=-#2]current page.north west) {#3};%
+  ([xshift=#1, yshift=-#2]current page.north west) {#3};
 }
-\newcommand{\ruleline}[3]{%
+\newcommand{\ruleline}[3]{
   \draw[line width=0.45pt]
-    ([xshift=#1, yshift=-#3]current page.north west) --
-    ([xshift=#2, yshift=-#3]current page.north west);%
+  ([xshift=#1, yshift=-#3]current page.north west) --
+  ([xshift=#2, yshift=-#3]current page.north west);
 }
-\newcommand{\coverformbasewest}[3]{%
+\newcommand{\coverformbasewest}[3]{
   \node[anchor=base west, inner sep=0pt] at
-    ([xshift=#1, yshift=-#2]coverformorigin) {#3};%
+  ([xshift=#1, yshift=-#2]coverformorigin) {#3};
 }
-\newcommand{\coverformbasecenter}[3]{%
+\newcommand{\coverformbasecenter}[3]{
   \node[anchor=base, inner sep=0pt] at
-    ([xshift=#1, yshift=-#2]coverformorigin) {#3};%
+  ([xshift=#1, yshift=-#2]coverformorigin) {#3};
 }
-\newcommand{\coverformruleline}[3]{%
+\newcommand{\coverformruleline}[3]{
   \draw[line width=0.45pt]
-    ([xshift=#1, yshift=-#3]coverformorigin) --
-    ([xshift=#2, yshift=-#3]coverformorigin);%
+  ([xshift=#1, yshift=-#3]coverformorigin) --
+  ([xshift=#2, yshift=-#3]coverformorigin);
 }
 \newcommand{\coverFormFont}{\reportSong\fontsize{14pt}{16.5pt}\selectfont}
 \newcommand{\coverTitleFont}{\reportHei\fontsize{28pt}{28pt}\selectfont}

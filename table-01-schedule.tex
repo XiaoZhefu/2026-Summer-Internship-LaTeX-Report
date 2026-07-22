@@ -1,0 +1,64 @@
+% This table intentionally uses \hline and \cline to preserve merged-cell borders.
+% chktex-file 1
+% chktex-file 8
+% chktex-file 44
+
+\begingroup
+\hbadness=10000
+\setlength{\tabcolsep}{2pt}
+\setlength{\extrarowheight}{1pt}
+\renewcommand{\arraystretch}{1.10}
+\centering
+\reportSong\fontsize{8pt}{10pt}\selectfont
+\newcommand{\compactcell}[1]{\begingroup\renewcommand{\arraystretch}{0.78}\begin{tabular}[c]{@{}c@{}}#1\end{tabular}\endgroup}
+\newcommand{\tallcell}[1]{\parbox[c][11.5mm][c]{\linewidth}{\centering #1}}
+\newcommand{\scheduleDate}[2]{\Block[c,m]{#1-1}{#2}}
+\newcommand{\scheduleUnit}{\Block[c,m]{10-1}{\compactcell{中车南京浦镇车辆\\有限公司}}}
+\begin{table}[H]
+  \centering
+  \vspace{-2mm}
+  \caption{实习日程安排}
+  \vspace{-3mm}
+  \reportSong\fontsize{8pt}{10pt}\selectfont
+  \makebox[\linewidth][c]{
+    \begin{NiceTabular}{|>{\centering\arraybackslash}m{26mm}|>{\centering\arraybackslash}m{16mm}|>{\centering\arraybackslash}m{14mm}|>{\centering\arraybackslash}m{72mm}|>{\centering\arraybackslash}m{23mm}|}
+      \hline
+      \multicolumn{1}{|c|}{\reportHei\fontsize{9pt}{11pt}\selectfont 实习单位} &
+      \multicolumn{2}{c|}{\reportHei\fontsize{9pt}{11pt}\selectfont 时间}    &
+      \multicolumn{1}{c|}{\reportHei\fontsize{9pt}{11pt}\selectfont 教学内容}  &
+      \multicolumn{1}{c|}{\reportHei\fontsize{9pt}{11pt}\selectfont 地点}                                                                                                             \\
+      \hline
+      \scheduleUnit                                                        & \scheduleDate{4}{7月6日}  & \Block[c,m]{2-1}{上午} &
+      浦镇公司产品创新、升级与研发体系介绍                                                   &
+      \Block[c,m]{4-1}{浦镇文体报告厅}                                                                                                                                                     \\
+      \cline{4-4}
+                                                                           &                         &                      & 城轨车体概述及车体工艺制造技术介绍          &                          \\
+      \cline{3-4}
+                                                                           &                         & \Block[c,m]{2-1}{下午} & 转向架工艺设计流程介绍和焊接、组装智能产线介绍    &                          \\
+      \cline{4-4}
+                                                                           &                         &                      & 城轨车辆总装生产工艺技术概述             &                          \\
+      \cline{2-5}
+                                                                           & \scheduleDate{2}{7月7日}  & 上午                   & 企业文化展厅参观                   & 浦镇企业展厅                   \\
+      \cline{3-5}
+                                                                           &                         & 全天                   & 转向架分厂现场实习                  & 浦镇转向架分厂                  \\
+      \cline{2-5}
+                                                                           & 7月8日                    & 全天                   & 车体分厂现场实习                   & 浦镇车体分厂                   \\
+      \cline{2-5}
+                                                                           & 7月9日                    & 全天                   & \Block[c,m]{2-1}{总装分厂现场实习} & \Block[c,m]{2-1}{浦镇总装分厂} \\
+      \cline{2-3}
+                                                                           & \scheduleDate{2}{7月10日} & 上午                   &                            &                          \\
+      \cline{3-5}
+                                                                           &                         & 下午                   & \centering 交流活动            & 浦镇文体报告厅                  \\
+      \hline
+      \tallcell{\compactcell{上海中车申通轨道                                                                                                                                          \\交通车辆有限公司}} & \tallcell{7月13日}                   & \tallcell{上午}                   & \tallcell{参观赛车场车辆段维修中心，了解列车检修流程}      & \tallcell{\compactcell{上海地铁赛车场\\车辆段}} \\
+      \cline{1-5}
+      \tallcell{\compactcell{上海地铁维护保障                                                                                                                                          \\有限公司车辆分公司}} & \tallcell{7月14日}                   & \tallcell{上午}                   & \tallcell{参观梅陇维保中心，学习数字化运维与车辆检测实验室}   & \tallcell{\compactcell{上海地铁梅陇\\维保中心}} \\
+      \cline{1-5}
+      \tallcell{\compactcell{上海阿尔斯通                                                                                                                                            \\交通设备有限公司}}     & \tallcell{7月15日}                   & \tallcell{上午}                   & \tallcell{听取企业与车辆设计讲座，了解新线市域车设计}      & \tallcell{\compactcell{上海轨道交通\\设备发展有限公司}} \\
+      \cline{1-5}
+      \tallcell{\compactcell{中国铁路上海局集团                                                                                                                                         \\有限公司上海动车段}} & \tallcell{7月16日}                   & \tallcell{上午}                   & \tallcell{参观动车组高级修场，学习三级修与部件检修流程}     & \tallcell{\compactcell{上海动车段\\高级修场}} \\
+      \hline
+    \end{NiceTabular}
+  }
+\end{table}
+\endgroup

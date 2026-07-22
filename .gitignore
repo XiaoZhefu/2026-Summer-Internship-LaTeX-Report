@@ -6,6 +6,7 @@
 .vscode
 
 out/
+references/
 
 *.aux
 *.log
