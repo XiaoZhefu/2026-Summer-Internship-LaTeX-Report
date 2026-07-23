@@ -15,6 +15,7 @@
 \usepackage{multirow}
 \usepackage{nicematrix}
 \usepackage{newtxtext,newtxmath}
+\usepackage{tocloft}
 \usepackage{xcolor}
 \usepackage{xeCJK}
 \usepackage{tikz}
@@ -34,11 +35,14 @@
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
 \ctexset{
-  section = {format = \Large\reportHei\bfseries},
-  subsubsection = {beforeskip = 0.25\baselineskip, afterskip = 0.15\baselineskip}
+  section = {format = \Large\reportHei\bfseries, aftername = \hspace{0.2em}},
+  subsection = {format = \large\reportHei\bfseries},
+  subsubsection = {format = \normalsize\reportHei\bfseries, beforeskip = 0.25\baselineskip, afterskip = 0.15\baselineskip}
 }
 \DeclareCaptionFont{wuhao}{\reportSong\fontsize{10.5pt}{12.5pt}\selectfont}
+\captionsetup[figure]{font=wuhao, labelsep=quad, justification=centering, hypcap=false}
 \captionsetup[table]{font=wuhao, labelsep=quad, justification=centering, hypcap=false}
+\newcommand{\sourcecite}[1]{\textsuperscript{\color{red}[#1]}}
 
 \newcommand{\pagecanvas}[1]{
   \thispagestyle{empty}
@@ -79,6 +83,6 @@
 }
 \newcommand{\coverFormFont}{\reportSong\fontsize{14pt}{16.5pt}\selectfont}
 \newcommand{\coverTitleFont}{\reportHei\fontsize{28pt}{28pt}\selectfont}
-\newcommand{\instructionTitleFont}{\reportHei\fontsize{22pt}{22pt}\selectfont}
+\newcommand{\instructionTitleFont}{\reportHei\bfseries\fontsize{22pt}{22pt}\selectfont}
 \newcommand{\instructionFont}{\reportFang\fontsize{15.5pt}{24pt}\selectfont}
 \newcommand{\fixedline}[1]{\noindent\makebox[0pt][l]{#1}\\}

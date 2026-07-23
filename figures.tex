@@ -1,0 +1,61 @@
+% Centralized figure blocks for report.tex.
+% chktex-file 1
+% chktex-file 8
+% chktex-file 44
+
+\newcommand{\reportFigure}[1]{
+  \ifcsname reportFigure@#1\endcsname
+    \csname reportFigure@#1\endcsname
+  \else
+    \PackageError{report}{Undefined report figure #1}{Check figures.tex.}
+  \fi
+}
+
+\expandafter\newcommand\csname reportFigure@1\endcsname{
+  \includegraphics[width=82mm]{assets/tongji-report-logo.jpg}
+}
+
+\expandafter\newcommand\csname reportFigure@2\endcsname{
+  \begin{figure}[H]
+    \centering
+    \vspace{-6mm}
+    \includegraphics[width=0.98\textwidth, trim=2pt 2pt 2pt 2pt, clip]{assets/GOUJIA_untagged.pdf}
+    \includegraphics[width=0.96\textwidth]{assets/20260710_120305.jpg}
+    \vspace{-2mm}
+    \caption{构架焊接智能产线布局示意图}\label{fig:goujia-welding}
+    \vspace{-5mm}
+  \end{figure}
+}
+
+\expandafter\newcommand\csname reportFigure@3\endcsname{
+  \begin{figure}[H]
+    \centering
+    \vspace{-6mm}
+    \includegraphics[width=0.25\textwidth, trim=2pt 2pt 2pt 2pt, clip]{assets/U_untagged.pdf}
+    \vspace{-9mm}
+    \caption{U形生产线示意图}\label{fig:bogie-u-line}
+    \vspace{-5mm}
+  \end{figure}
+}
+
+\expandafter\newcommand\csname reportFigure@4\endcsname{
+  \begin{figure}[H]
+    \centering
+    \vspace{-6mm}
+    \includegraphics[width=0.8\textwidth, trim=2pt 2pt 2pt 2pt, clip]{assets/MAP_untagged.pdf}
+    \vspace{-5mm}
+    \caption{总装厂房位置布局（简化）}\label{fig:general-assembly-layout}
+    \vspace{-5mm}
+  \end{figure}
+}
+
+\expandafter\newcommand\csname reportFigure@5\endcsname{
+  \begin{figure}[H]
+    \centering
+    \vspace{-3mm}
+    \includegraphics[width=0.98\textwidth]{assets/L21-corrected.jpg}
+    \vspace{-2mm}
+    \caption{上海地铁21号线列车外观与内装示意}\label{fig:l21-train}
+    \vspace{-5mm}
+  \end{figure}
+}
