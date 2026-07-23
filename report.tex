@@ -62,7 +62,7 @@
 
 \newpage
 \pagecanvas{
-  \basecenter{105mm}{45mm}{\instructionTitleFont 说\hspace{1.4em}明}
+  \basecenter{105mm}{45mm}{\instructionTitleFont 说\hspace{0.7em}明}
   \northwest{31.8mm}{62mm}{
     \scalebox{0.895}[1]{
       \begin{minipage}{157.4mm}
@@ -91,9 +91,13 @@
 
 
 \newpage
-\pagecanvas{
-  \basecenter{105mm}{32mm}{\reportHei\fontsize{16pt}{16pt}\selectfont 目\hspace{1.6em}录}
-}
+\thispagestyle{empty}
+{\centering\reportHei\fontsize{22pt}{24pt}\selectfont 目\hspace{0.7em}录\par}
+\vspace{6mm}
+\makeatletter
+\@starttoc{toc}
+\makeatother
+\thispagestyle{empty}
 
 
 \newpage
