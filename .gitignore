@@ -1,4 +1,4 @@
-.agents
+﻿.agents
 .claude
 .codex
 .git
@@ -6,7 +6,6 @@
 .vscode
 
 out/
-references/
 
 *.aux
 *.log
