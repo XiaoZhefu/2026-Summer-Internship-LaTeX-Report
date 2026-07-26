@@ -1,4 +1,4 @@
-% Centralized figure blocks for report.tex.
+﻿% Centralized figure blocks for report.tex.
 % chktex-file 1
 % chktex-file 8
 % chktex-file 44
@@ -215,4 +215,38 @@
     \caption{赛车场车辆段部分检修现场}\label{fig:metro-maintenance-scenes}
     \vspace{-5mm}
   \end{figure}
+}
+
+\expandafter\newcommand\csname reportFigure@17\endcsname{
+  \begin{figure}[H]
+    \centering
+    \vspace{-2.5mm}
+    \includegraphics[width=0.98\textwidth, trim=8pt 2pt 8pt 2pt, clip]{assets/M_untagged.pdf}
+    \vspace{-2.5mm}
+    \caption{上海地铁21号线$\mathrm{M}$车车下设备布局图}\label{fig:l21-m-underfloor-layout}
+    \vspace{-5mm}
+  \end{figure}
+}
+
+\expandafter\newcommand\csname reportFigure@18\endcsname{
+  \begin{center}
+    \setlength{\fboxsep}{7pt}
+    \fbox{%
+      \begin{minipage}{0.6\textwidth}
+        \reportSong\fontsize{12pt}{12.6pt}\selectfont
+        \noindent{\reportHei 打开箱盖之前：}
+        \vspace{-2.5mm}
+        \begin{enumerate}
+          \setlength{\itemsep}{-1pt}
+          \setlength{\parsep}{0pt}
+          \setlength{\topsep}{1pt}
+          \setlength{\partopsep}{0pt}
+          \item 降下所有受电弓；
+          \item 断开所有车间电源；
+          \item 等候$5~\min$；
+          \item 将所有的IES开关锁定至“接地”位置。
+        \end{enumerate}
+      \end{minipage}%
+    }
+  \end{center}
 }
